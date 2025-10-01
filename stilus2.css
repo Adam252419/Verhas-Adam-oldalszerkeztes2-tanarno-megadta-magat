@@ -1,0 +1,55 @@
+*{
+    border:5px solid black;
+    box-sizing: border-box;
+}
+article{
+    grid-area: ar;
+}
+
+header{
+    grid-area: h;
+}
+
+nav{
+    grid-area: n;
+}
+
+aside{
+    grid-area: a;
+}
+footer{
+    grid-area: f;
+}
+section{
+    grid-area: s;
+}
+body{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 150px 150px 200px 200px 200px;
+    gap: 10px;
+    height: 100vh;
+    grid-template-areas:
+    "h h"
+    "n n"
+    "s a"
+    "ar a"
+    "f f";
+    
+}
+@media screen and(max-width:500px){
+    body{
+        width: 100%;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          grid-template-areas: 
+         "h"
+         "n"
+         "s"
+         "ar"
+         "m"
+         "a"
+         "f";
+    }
+    
+}
